@@ -8,4 +8,4 @@ WORKDIR /var/www/html
 RUN unzip frica.zip
 RUN cp -rvf html/* .
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPOSE 80 
+EXPOSE 80
