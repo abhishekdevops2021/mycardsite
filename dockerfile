@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER abhishekshahane
+MAINTAINER abhishekshahane-docker
 RUN apt-get update 
 RUN apt-get install nginx -y
 RUN apt-get install zip -y
