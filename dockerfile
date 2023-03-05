@@ -6,3 +6,4 @@ WORKDIR /var/www/html
 RUN echo mysite > index.html
 RUN service nginx start
 EXPOSE 80
+ENTRYPOINT service nginx start && /bin/bash
