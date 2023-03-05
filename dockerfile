@@ -1,11 +1,12 @@
-FROM centos:latest
+FROM ubuntu:latest
 MAINTAINER abhishekshahane
-RUN yum install -y httpd \
-  zip \
- unzip
+RUN apt-get update 
+RUN apt-get install nginx -y
+RUN apt-get install zip -y
+RUN apt-get install unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/frica.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip frica.zip
 RUN cp -rvf html/* .
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+RUN service nginx start
 EXPOSE 80
