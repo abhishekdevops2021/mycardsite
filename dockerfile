@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER abhishekshahane-docker..
+MAINTAINER abhishekshahane-docker
 RUN apt-get update 
 RUN apt-get install nginx -y
 WORKDIR /var/www/html
