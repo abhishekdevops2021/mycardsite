@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+     - name: stop container
+       shell: docker container stop mycard
+     - name: remove container
+       shell: docker container rm mycard
+     - name: remove docker image
+       shell: docker image rm 959597/mycardsite
+     - name: create container
+       shell: docker container run -itd --name mycard -p 9000:80 959597/mycardsite
